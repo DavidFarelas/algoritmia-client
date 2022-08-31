@@ -13,6 +13,8 @@ const Formulario = () => {
   };
   const [values, setValues] = useState(initialValues);
 
+  const { email, name, studentNumber } = values;
+
   const handleChange = (e) => {
     setValues({
       ...values,
@@ -21,8 +23,8 @@ const Formulario = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(startSendFormAction(values));
     setValues(initialValues);
+    dispatch(startSendFormAction(values));
   };
 
   return (
@@ -44,6 +46,7 @@ const Formulario = () => {
             type="email"
             placeholder="Ingresa tu correo electrónico"
             onChange={(e) => handleChange(e)}
+            value={email}
           />
         </Form.Group>
 
@@ -54,6 +57,7 @@ const Formulario = () => {
             type="text"
             placeholder="Ingresa tu nombre completo"
             onChange={(e) => handleChange(e)}
+            value={name}
           />
         </Form.Group>
 
@@ -64,6 +68,7 @@ const Formulario = () => {
             type="text"
             placeholder="Ingresa tu número de boleta"
             onChange={(e) => handleChange(e)}
+            value={studentNumber}
           />
         </Form.Group>
 
