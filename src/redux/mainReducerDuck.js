@@ -28,7 +28,7 @@ export const startSendFormAction = (studentData) => (dispatch) => {
 
   axios
     .post(
-      "https://young-ridge-21616.herokuapp.com/api/v1/students/register",
+      "https://frozen-citadel-06983.herokuapp.com/api/v1/students/register",
       studentData,
       {
         "Content-Type": "application/json",
