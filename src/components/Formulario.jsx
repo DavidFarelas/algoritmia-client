@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
@@ -6,6 +5,7 @@ import { startSendFormAction } from "../redux/mainReducerDuck";
 
 const Formulario = () => {
   const dispatch = useDispatch();
+
   const initialValues = {
     email: "",
     name: "",
